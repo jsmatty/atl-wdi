@@ -60,13 +60,32 @@ track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
-> Answer here
+>var task = {
+  name: 'pick paint color';
+  startDate: '07/05/2017';
+  endDate: '07/05/2017';
+};
+var project = {
+  name: 'paint bedroom';
+  setOfTasks: ['buy paint', 'buy brushes', 'tape-off walls' ];
+  }
+
+Using variables "Task" and "Project" would allow the user to track their progress on completing a task but, also work efficiently through a group of tasks that make up a project. You could also add another property 'completeByDate' that would allow the user to set a projected completion date, so they can see how many minutes/hours they should spend on the task/project daily in order to complete by a certain date.
 
 ### 2. Photo Sharing App
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
-> Answer here
+var user = {
+  name: 'Jessica';
+  NumberOfAlbums: '6';
+};
+var photo = {
+  uploadDate: '07/05/2017';
+  photoName: 'Photo of dog'; 
+}
+
+Using variables "User" and "photo" allows users to organize uploaded photos into albums based on names and date the picture was uploaded.
 
 ### 3. Home Automation Manager
 
@@ -75,7 +94,16 @@ track of the time and temperature of the house that it monitors, and use that
 information to turn on and off different lights and adjust the thermostat up
 and down.
 
-> Answer here
+var house = {
+  lightLocations; ['living room', 'master bedroom', 'kitchen', 'guest room'];
+  temperatureFarenheit: '68';
+}
+var thermostat = {
+  time: '05:30';
+  dayOfWeek:'Thursday';
+  temperature: '71';
+}
+Variables "House" and "Thermostat", would allow users to access lights in different areas of their house and check the overall interior temperature. The variable "Thermostat" would allow users to set different temperatures in the house based on the time and day of the week. The day of the week matters because people generally turn off their AC while at work during the week and usually run it all day during the weekends.
 
 ### 4. Sneaker Store
 
@@ -83,7 +111,18 @@ This app will allow customers to browse a list of products (sneakers, in this
 case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
 
-> Answer here
+var products = {
+  name: 'Pool float';
+  description: "Inflatable pizza shaped pool float.";
+  price: 20.00;
+}
+var order = {
+  items: '1';
+  dateOrderPlaced: '06/04/2017';
+  ShippingCost: '5.00';
+  totalPrice: '25.00';
+}
+The "Product" variable will have detailed information concerning a specific product. The "Order" variable will allow users to preview their items as well as total costs before commiting to a purchase.
 
 ## Representing Abstractions in Code
 
@@ -139,7 +178,9 @@ var exampleLine = {
 
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
-> Answer here
+> Disadvantages of these representations is that the user would want to know a specific number of stops before arriving at their destination or how many stops a train has left before it gets to the station they are waiting at.
+
+Advantages of these representations is that each of the stops has a name and description that the user can access but, the user would need to search that specific location and calculate how many stops from that information.
 
 ### 6. Doctor Appointment App
 
@@ -242,7 +283,11 @@ Under what circumstances might one representation be a better choice than the
 other? Are there any circumstances in which the other representation might be
 the better choice?
 
-> Answer here
+> In the first example: it would be fairly easy to find all the appointments a given doctor has since they are rooted in the doctors variable but, to find a patients appointment the user would need to check every doctors appointments for their specific appointment.
+ 
+ In the second example: This is much easier to find a patients appointments but, in order to find a specific doctors appointments, the user would need to filter through each appointment.
+
+ I think choosing a better format over the other would ultimately depend on who the user is and what information they are trying to find. A doctor would not need to look at all appointments of specific patient and vice versa.
 
 ## Tying It Together
 
@@ -253,13 +298,37 @@ You've been tasked with building an in-browser tic-tac-toe game.
 a.  What are some possible entities that your application might use to model its
     data? Please pick at least two, with at least two properties apiece.
 
-  > Answer here
-
 b.  How might those entities be represented in JavaScript code?
 
-  > Answer here
+  var player = {
+      username: 'jsmatty'
+      photoUrl: 'http://imgur.com/..'
+  };
+  var move = {
+    gamePiece: 'o',
+    position: 3,
+   };
+  var game = {
+      playerO: {
+        username:'jsmatty',
+        photoURL: 'http://imgur.com/..',
+    },
+      moves: [
+    {
+      gamePiece: 'O',
+      position: 2,
+    },
+    {
+      gamePiece: 'X',
+      position: 4,
+    }
+  ]
+ };
+  
+
 
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
 
-  > Answer here
+  > The game of Tic-Tac-Toe usually has two players represented with game pieces 'X' and 'O'. A player will move to a position on the game board depending on either what moves/ position they need to be at on the board to achieve either three in a row or block their opponent. 
+  Each player has their own property which allows us to store any information regarding their moves and scores in an array. 
