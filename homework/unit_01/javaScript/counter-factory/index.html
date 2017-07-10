@@ -1,26 +1,28 @@
-<!--
-General Assembly, WDI (Web Development Immersive) Remote, Cohort 02 (R2D2)
-Copyright (C) 2016 Matt Brendzel under the GNU General Public License.
-See LICENSE for details.
--->
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Counter Factory</title>
     <link rel="stylesheet" href="main.css">
     <script src='hw.js'></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class='component'>
-      <h1> Make a counter, easy as pie! </h1>
-      <h2> Just click the button below to make a new counter. </h2>
-      <button id='new-counter'>New Counter!</button>
+        <h1> Counter Button </h1>
+        <h2> Just click the button below to make a new counter. </h2>
+        <button id='new-counter'>New Counter!</button>
     </div>
     <main class='component'>
-      <h2> Counters: </h2>
-      <div id='counter-list'>
-      </div>
+        <h2> Counters: </h2>
+        <div id='counter-list'>
+            <div class='counter' data-index='2'>
+                <h3>Count: <span>0</span></h3>
+                <button class='increment'> + 1 </button>
+            </div>
+        </div>
     </main>
-  </body>
+</body>
+
 </html>

@@ -16,36 +16,55 @@
 
 
 window.onload = function() {
-  var body = document.body;
-  var ring1 = document.querySelector('.ring-1');
-  var ring2 = document.querySelector('.ring-2');
-  var ring3 = document.querySelector('.ring-3');
+    var body = document.body;
+    var ring1 = document.querySelector('.ring-1');
+    var ring2 = document.querySelector('.ring-2');
+    var ring3 = document.querySelector('.ring-3');
 
-  body.addEventListener('click', bullseyeGame.miss);
-  ring1.addEventListener('click', bullseyeGame.outerRing)
+    document.body.addEventListener("click", bullseyeGame.miss);
+    ring1.addEventListener("click", bullseyeGame.outerRing);
+    ring2.addEventListener("click", bullseyeGame.middleRing);
+    ring3.addEventListener("click", bullseyeGame.bullseye);
 }
 
 
 var bullseyeGame = {
-  score: 0,
+    score: 0,
 
-  updateScore: function(points) {
-    var scoreElement = document.querySelector('.score');
-    this.score += points
+    updateScore: function(points) {
+        var scoreElement = document.querySelector('.score');
+        this.score += points
 
-    scoreElement.innerHTML = `${this.score} points`
-  },
+        scoreElement.innerHTML = `${this.score} points`
+    },
 
-  miss: function(event) {
-    event.stopPropagation();
-    alert('YOU MISSED');
+    miss: function(event) {
+        event.stopPropagation();
+        alert('YOU MISSED');
+        bullseyeGame.updateScore(0);
+        // [ALERT:] needs to be bullseyeGame because this in clickEvents refers to the html element that was clicked
+    },
 
-    bullseyeGame.updateScore(0);
-    // [ALERT:] needs to be bullseyeGame because this in clickEvents refers to the html element that was clicked
-  },
+    outerRing: function(event) {
+        event.stopPropagation();
+        alert('outerRing was clicked');
+        bullseyeGame.updateScore(10);
+        event.target.style.backgroundColor = 'yellow';
+    },
 
-  outerRing: function(event) {
-    event.stopPropagation();
-    alert('outerRing was clicked')
-  }
+    middleRing: function(event) {
+        event.stopPropagation();
+        bullseyeGame.updateScore(50);
+        event.target.style.backgroundColor = 'yellow';
+        alert('middleRing was clicked');
+    },
+
+    bullseye: function(event) {
+        event.stopPropagation();
+        alert('bullseye was clicked');
+        bullseyeGame.updateScore(100);
+        event.target.style.backgroundColor = 'yellow';
+    },
+
+
 }
