@@ -1,0 +1,13 @@
+const express = require('express');
+const router = express.Router();
+
+
+router.get('topping/:type', function(request, response)]{
+    response.send(`${req.params.type} pizza! Good choice!`);
+
+});
+
+
+
+
+module.exports = router;
