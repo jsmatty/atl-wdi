@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
+
 <body>
+    <div id="counter" data-counter-index="0">
+        <span id="current-count"></span>
+        <button id="add-one">+1</button>
 
 
-  <script src="scripts/script.js"></script>
+    </div>
+    <form>
+        <input type="text" id="new-counter-id">
+        <input type="number" id="new-counter-start-value">
+        <button id="add-new-counter">Submit</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" src="scripts/script.js"></script>
 </body>
+
 </html>

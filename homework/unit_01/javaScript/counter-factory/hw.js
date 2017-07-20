@@ -4,7 +4,7 @@
 
 "use strict";
 
-ar CounterCollection = {
+var CounterCollection = {
     lastCountId: 0,
     counters: [], // e.g. {countId: 3, count: 20}
     createCounter: function() {
