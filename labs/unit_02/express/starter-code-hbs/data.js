@@ -6,10 +6,7 @@ module.exports = {
         description: "dry cleaning",
         urgent: false
     }, {
-        description: "shave my armpits",
+        description: "drink a beer",
         urgent: true
-    }, {
-        description: "take over the world",
-        urgent: false
-    }, ]
+    }]
 };

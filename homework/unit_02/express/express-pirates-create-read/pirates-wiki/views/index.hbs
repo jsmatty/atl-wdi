@@ -1,0 +1,15 @@
+<h1>Here ye lie a list of {{ pirates.length }} pirates!!</h1>
+
+<a href="pirates/new">Build a pirate but, Beware!</a>
+<ul>{{#each pirates}}
+  <li>Name: <a href="/pirates/{{@index}}">{{name}}</a></li>
+  <li>Birthplace: {{birthplace}}</li>
+  <li>Death Year: {{death_year}}</li>
+  <li>Base: {{base}}</li>
+  <li>Nickname: {{nickname}}</li>
+  <form method="POST" action="pirates/{{@index}}?_method=DELETE">
+          <button>Dance with Jack Ketch</button>
+  </form>
+  <br />
+  {{/each}}        
+</ul>

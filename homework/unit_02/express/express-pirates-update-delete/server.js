@@ -2,10 +2,12 @@
 // REQUIREMENTS
 //===========================
 var express = require("express");
+var hbs = require('hbs');
 var app = express();
 var logger = require("morgan");
 var bodyParser = require("body-parser");
-var hbs = require('hbs');
+var methodOverride = require ('method-override');
+
 
 
 //===========================
@@ -14,7 +16,7 @@ var hbs = require('hbs');
 //this is for morgan
 app.use(logger("dev"));
 //these are for bodyParser
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 //set handlebars as view engine
 app.set("view engine", "hbs");
@@ -32,6 +34,6 @@ app.use("/pirates", pirateController);
 //===========================
 // LISTENERS
 //===========================
-app.listen(3000, function(req, res){
-	console.log("listening");
+app.listen(3000, function(req, res) {
+    console.log("listening");
 });
