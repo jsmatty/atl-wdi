@@ -1,4 +1,4 @@
-///PART ONE: Create CONSTRUCTOR()//////
+////\\\\## PART ONE: CREATE CONSTRUCTOR() ##\\\\//////
 
 //write constructor function//class
 //use this.propertyName = value//constructor
@@ -12,7 +12,7 @@
 //console.log NEW Objects to test//console.log(constructedObject1)
 //invoke *Cry METHOD on each new constructed objects//_____1.cry();
 
-///////PART TWO: Add ARGUMENTS///////
+/////\\\\\## PART TWO: ADD ARGUMENTS ##\\\\\\\///////
 //*constructed objects, values, arguments to constructor function
 //*takes input (params), PUT values into constructed Object
 
@@ -32,7 +32,7 @@
 // -creatureTypes
 //invoke cry method forEach tamagotchi
 
-/////////PART THREE: More METHODS/////////
+/////\\\\\\\PART THREE: MORE METHODS\\\\\/////////
 ///add PUKE Method
 //Puke Function:
 // - reduce foodInTummy by 1 (-1)
@@ -45,7 +45,7 @@
 //test the methods
 //console.log(name + altered values
 
-/////PART FOUR: Add PLAYER/////////
+//////\\\\\## PART FOUR: ADD PLAYER ##\\\\\/////////
 //player.js = {player} object
 //player object has:
 // -name + (3) Methods: each(take tamagotchi as ARGUMENT)
@@ -58,7 +58,7 @@
 //*HINT: use tamagotchi object (tamagotchi1/tamagotchi2) as argument 
 //to player's feedTamagotchi function: player.feedTamagotchi(tamagotchi1)
 
-//////PART FIVE: START and STOP/////////////
+////\\\\## PART FIVE: START & STOP ##\\\\\/////////////
 /////"New Methods + Timers"/////
 //tamagotchi constructor add methods:
 // - Start
@@ -66,9 +66,16 @@
 //use setInterval() method//
 ///*setInterval(function() {alert("hello"); }, 3000);
 //START method will kick-off (3) TIMERS:
-// 1.hungerTimer --> cry method, every[6000] secs.
-// 2.yawnTimer --> cry method, every[10000] secs.
-// 3.sickTimer --> cry method, every[20000] secs
+//console.log("starting " + this.name)
+//create variable for self, set equal to this
+// 1.hungerTimer --> self.cry method, every[6000] secs.
+// 2.yawnTimer --> self.yawn method, every[10000] secs.
+// 3.sickTimer --> self.puke method, every[20000] secs
 //STOP method will stop the (3) timers
+//console.log("Stopping " + this.name)
 ///use clearInterval() method
-///*clearInterval(id_of_setInterval)///
+///*clearInterval(this.startMethods)///
+
+////\\\\## TESTER TAMAGOTCHIS ##\\\\////
+//make new Tamagotchis: try runnning multiple,
+//and turning them on and off!
