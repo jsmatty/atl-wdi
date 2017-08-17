@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import Home from './components/Home.js';
 import UserProfile from './components/UserProfile';
+import DebitsPage from './DebitsPage';
 
 import axios from 'axios';
 
@@ -72,16 +73,22 @@ this._getCredits();
 
 const accountBalance = this._calculateAccountBalance();
 
-const HomeComponent = () => (<Home accountBalance={this._calculateAccountBalance()}/>);
+const HomeComponent = () => (<Home accountBalance={accountBalance}/>);
 const UserProfileComponent = () => (
-    <UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}  />
+    <UserProfile 
+    userName={this.state.currentUser.userName} 
+    memberSince={this.state.currentUser.memberSince}  />
     );
+
+
+const DebitsPageComponent = () =>(<DebitsPage debits={this.state.debits} /> );
 
     return (
         <Router>
           <div>
             <Route exact path="/" render={HomeComponent}/>
             <Route exact path="/userProfile" render={UserProfileComponent}/>
+            <Route exact path="/debits" render={DebitsPageComponent} />
           </div>
         </Router>
     );
