@@ -46,3 +46,15 @@
 # puts "#{name} would like to #{to_do}."
 
 ## Challenge 6: Arrays
+# myFirstArray = []
+# myFirstArray = ["Do", "Re", "Mi", "Fa", "So", "La", 9, 8, 7, 6]
+# puts myFirstArray[-1]
+# puts myFirstArray[0]
+
+# myFirstArray[1] = "Joe"
+# myFirstArray[0] = 3
+# myFirstArray.push("true")
+# puts myFirstArray[3].class
+
+## Challenge 7: Hashes
+
