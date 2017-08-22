@@ -13,3 +13,11 @@
 # puts fishsticks.class
 
 ## Challenge 3: Integers
+# d = 13
+# puts d
+# e = 3.14
+# puts e
+# d = e
+# puts d
+
+## Challenge 4: Strings
