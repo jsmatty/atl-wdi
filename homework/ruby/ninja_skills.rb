@@ -6,4 +6,10 @@
 #
 
 ## Challenge 2: Nil
-# 
+# fishsticks = nil
+# puts fishsticks
+# puts "#{fishsticks} + was here"
+# puts #{fishsticks}
+# puts fishsticks.class
+
+## Challenge 3: Integers
