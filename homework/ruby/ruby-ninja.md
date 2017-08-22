@@ -6,7 +6,7 @@ Tonight you're going to get the basics down and put your Ruby skills to the test
 
 ## Setup
 
-Include all of your code in the file called ```ninja_skills.rb```.  You can run the file by typing in ```ruby ninja_skills.rb``` in your terminal. You may comment out pieces of code when you're not using them.
+Include all of your code in the file called ```ninja_skills.rb```.  You can run the file by typing in ```re``` in your terminal. You may comment out pieces of code when you're not using them.
 
 ## Directions
 
