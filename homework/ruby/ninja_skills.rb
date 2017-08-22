@@ -46,6 +46,7 @@
     puts "#{name} would like to #{to_do}."
 
 ## Challenge 6: Arrays
+
  myFirstArray = []
  myFirstArray = ["Do", "Re", "Mi", "Fa", "So", "La", 9, 8, 7, 6]
     puts myFirstArray[-1]
@@ -58,15 +59,42 @@
     puts myFirstArray[3].class
 
 ## Challenge 7: Hashes
+
  myFavoriteAnimals = {
     Ernest: "Otter",
     Edgar: "Donkey",
     Einstein: "Ostrich",
     Elvis: "Giraffe"
 }
-myFavoriteAnimals["Edgar"] = "Bear"
+  myFavoriteAnimals["Edgar"] = "Bear"
 myFavoriteMovie = {}
-myFavoriteMovie[:movie] = "Goodfellas"
+  myFavoriteMovie[:movie] = "Goodfellas"
 
 ## Challenge 8: Ranges
+
+firstRange = (1..10)
+ firstRange.to_a
+secondRange = (1..1000)
+ secondRange.to_a
+
+firstRange.each do |number|
+    puts number.to_s
+end
+
+x = 0 
+
+while x < 50 
+  puts secondRange[x]
+x += 1
+  end
+OddStrings = firstRange.map do |number|
+  if number.odd?
+    number.to_s
+  else
+    number
+   end
+  end  
+
+
+
 
